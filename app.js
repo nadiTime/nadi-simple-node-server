@@ -5,6 +5,10 @@ import { Parser } from "xml2js";
 const app = express();
 // use the express-static middleware
 app.use(express.static("public"));
+app.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', '*')
+  next()
+})
 
 // define the first route
 app.get("/", function (req, res) {
@@ -22,7 +26,6 @@ app.get("/news", async (req, res) => {
     const item = items[Math.floor(Math.random()*items.length)]
     res.json(item);
   } catch (error) {
-    console.log(error);
     res.json(error);
   }
 });

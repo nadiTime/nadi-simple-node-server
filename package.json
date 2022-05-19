@@ -12,6 +12,9 @@
     "kill": "kill -9 $(lsof -t -i:3982)",
     "dev:test": "concurrently -k \"tsc -w\" \"nodemon ./dist/app.js\""
   },
+  "engines": {
+    "node": "^14.18.1"
+  },
   "keywords": [],
   "author": "Nadi Cohen",
   "license": "ISC",

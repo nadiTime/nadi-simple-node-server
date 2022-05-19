@@ -1,6 +1,6 @@
 {
   "name": "blings-homepage-server",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "dist/app.js",
   "scripts": {
@@ -10,7 +10,7 @@
     "dev": "nodemon dist/app.js",
     "tsc": "tsc --watch",
     "kill": "kill -9 $(lsof -t -i:3982)",
-    "dev:test" : "concurrently -k \"tsc -w\" \"nodemon ./dist/app.js\""
+    "dev:test": "concurrently -k \"tsc -w\" \"nodemon ./dist/app.js\""
   },
   "keywords": [],
   "author": "Nadi Cohen",
